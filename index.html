@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Spam Detection</title>
+</head>
+<body>
+    <h1>Email Spam Detection</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="email">Enter Email Text:</label><br>
+        <textarea name="email" rows="10" cols="50" placeholder="Type email content here..."></textarea><br><br>
+        <label for="file">Or Upload Email File:</label><br>
+        <input type="file" name="file"><br><br>
+        <button type="submit">Classify</button>
+    </form>
+    {% if result %}
+        <h2>Result: {{ result }}</h2>
+        <p>Confidence: {{ confidence }}%</p>
+    {% endif %}
+</body>
+</html>
